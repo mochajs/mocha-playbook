@@ -1,0 +1,19 @@
+plugins:
+  - github
+  - github-oauth
+  - s3
+  - git
+  - ghprb
+  - github-branch-source
+  - xunit
+  - git-changelog
+  - build-timeout
+  - build-monitor-plugin
+  - cobertura
+  - credentials-binding
+  - dashboard-view
+  - build-name-setter
+  - nodejs
+  - rebuilder
+  - thinBackup
+  - ws-cleanup

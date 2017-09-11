@@ -1,0 +1,5 @@
+---
+#jenkins_http_port: 80
+#jenkins_init_changes:
+#  - option: JENKINS_ARGS
+#    value: "--httpsPort=443"

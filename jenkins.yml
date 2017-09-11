@@ -1,0 +1,22 @@
+- name: Installing Jenkins
+  hosts: ci
+  remote_user: root
+
+  vars_prompt:
+    - name: jenkins_admin_username
+      prompt: Jenkins admin username?
+      default: admin
+    - name: jenkins_admin_password
+      prompt: Jenkins admin password?
+      private: yes
+      default: admin
+
+  pre_tasks:
+    - include_vars: plugins.yml
+    - include_vars: group_vars/ci.yml
+
+  roles:
+    - role: geerlingguy.jenkins
+      when: "ansible_os_family == 'Debian'"
+      java_packages:
+        - openjdk-8-jdk
